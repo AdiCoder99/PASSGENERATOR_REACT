@@ -76,7 +76,7 @@ Contributions are welcome. Prefer small, focused pull requests. Add tests for ne
 
 ## License
 
-This project is licensed under the MIT License. Change or add a different license if you prefer.
+This project is licensed under the MIT License. 
 
 ---
 
