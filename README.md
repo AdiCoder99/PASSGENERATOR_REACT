@@ -1,16 +1,82 @@
-# React + Vite
+## Password Generator (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Small, single-page React app that generates secure passwords with configurable options. Built with Vite for fast development and HMR.
 
-Currently, two official plugins are available:
+## Highlights
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Generate random passwords with options for length and character sets (uppercase, lowercase, numbers, symbols).
+- Copy generated password to clipboard with one click.
+- Minimal, responsive UI built with Tailwind CSS (see `vite.config.js` and `src/index.css`).
 
-## React Compiler
+## Requirements
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js 14+ (Node 16+ recommended)
+- npm (or yarn)
 
-## Expanding the ESLint configuration
+## Quick start (dev)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Open a PowerShell terminal in the project root and run:
+
+```powershell
+npm install
+npm run dev
+```
+
+Vite starts a dev server (default http://localhost:5173). Follow the terminal output if a different port is used.
+
+## Build and preview (production)
+
+```powershell
+npm run build
+npm run preview
+```
+
+## Project structure
+
+- `index.html` — App entry point
+- `src/` — React source files
+	- `main.jsx` — React mount and router (if present)
+	- `App.jsx` — Main application component (password generator UI)
+	- `App.css`, `index.css` — Styles
+	- `assets/` — Images/icons
+- `public/` — Static public files
+- `package.json` — Scripts and dependencies
+- `vite.config.js` — Vite configuration
+
+## Available scripts (from `package.json`)
+
+- `npm run dev` — Start development server with fast refresh
+- `npm run build` — Create a production build in `dist/`
+- `npm run preview` — Serve the production build locally
+
+## Usage notes
+
+- Adjust password length and character sets in the UI and click "Generate".
+- Use the copy button to copy the password to clipboard; browsers may prompt for clipboard permissions.
+
+## Troubleshooting
+
+- If `npm install` fails, ensure Node.js is installed and try clearing the npm cache:
+
+```powershell
+npm cache clean --force
+npm install
+```
+
+- If Vite fails to start because of a port conflict, it will suggest an alternate port — open the one shown in the terminal.
+- If the UI doesn't update on save, ensure the dev server is running and that HMR is enabled in `vite.config.js`.
+
+## Testing & linting
+
+This project doesn't include automated tests by default. To add tests, consider installing Jest or Vitest and add a basic test runner.
+
+## Contributing
+
+Contributions are welcome. Prefer small, focused pull requests. Add tests for new behavior where possible.
+
+## License
+
+This project is licensed under the MIT License. Change or add a different license if you prefer.
+
+---
+
